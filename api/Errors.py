@@ -8,3 +8,7 @@
     @describe:错误类，负责报错信息
 
 """
+
+class Errors:
+    def __int__(self):
+        pass

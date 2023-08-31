@@ -8,6 +8,7 @@
     @describe: 日志类
 
 """
+import logging
 
 class Logs:
     def __int__(self):
