@@ -2,7 +2,7 @@
 <h3>目录信息</h3>
 
 - api 接口信息
-    + 
+    + resource_handle 不同格式数据读取，写入
 - Conf 配置目录
 - src 资源目录
 

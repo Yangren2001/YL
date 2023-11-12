@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LogConfig>
+    <!--日志配置-->
+    <name>level</name>
+    <value>info</value>
+    <describe>test</describe>
+</LogConfig>
