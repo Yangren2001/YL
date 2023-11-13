@@ -9,6 +9,7 @@
 
 """
 
-from .Handle import Handle
+from api.resource_handle import (Handle, HandleBase, xmlHandle)
+
 
 __all__ = ["Handle"]

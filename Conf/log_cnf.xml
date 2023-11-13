@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LogConfig>
     <!--日志配置-->
-    <name>level</name>
-    <value>info</value>
-    <describe>test</describe>
+    <property>
+        <name>level</name>
+        <value>info</value>
+        <describe>test</describe>
+    </property>
+    <property>
+        <name>level1</name>
+        <value>info1</value>
+        <describe>test1</describe>
+    </property>
+
 </LogConfig>
