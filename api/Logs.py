@@ -16,7 +16,8 @@ class Logs:
     def __int__(self, name="myapp"):
         # 导入日志配置
         # self.log_conf = XmlHandle().read()
-        self.logger = logging.getLogger(name)          # 获取日志器对象
+        # 获取日志器对象
+        self.logger = logging.getLogger(name)
         # self.file_handle = logging.FileHandler()
 
     def logEnent(self, func, *args, **kwargs):
