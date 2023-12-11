@@ -2,6 +2,6 @@
 <Conf>
     <property>
         <name>log_dir</name>
-        <value></value>
+        <value>1</value>
     </property>
 </Conf>

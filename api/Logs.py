@@ -9,16 +9,48 @@
 
 """
 import logging
-from api.resource_handle.xmlHandle import XmlHandle
 from functools import wraps
+from api.Config import *
+
 
 class Logs:
-    def __int__(self, name="myapp"):
-        # 导入日志配置
-        # self.log_conf = XmlHandle().read()
+
+    def __init__(self, name="myapp"):
+        """
+            日志类
+        :param name: 日志器名字，默认myapp
+        """
         # 获取日志器对象
         self.logger = logging.getLogger(name)
+        self.setLevel()
         # self.file_handle = logging.FileHandler()
+        self.stream_handle = logging.StreamHandler()
+        self.logger.addHandler(self.stream_handle)
+        self.init_log_format()
+
+    def auto_create_log_file(self):
+        """
+        自动创建日志文件
+        :return:
+        """
+        # 时间检测
+
+    def setLevel(self):
+        """
+        设置日志等级
+        :return:
+        """
+        level = LOG_LEVEL.upper()
+        if hasattr(logging, level):
+            self.logger.setLevel(getattr(logging, level))
+
+
+    def init_log_format(self):
+        """
+        初始化日志格式
+        :return:
+        """
+        self.stream_handle.setFormatter(logging.Formatter(LOG_OUT_FORMAT, datefmt="%Y-%m-%d %H:%M:%S"))
 
     def logEnent(self, func, *args, **kwargs):
         """
@@ -26,11 +58,11 @@ class Logs:
         :param: func
         :return:
         """
+
         @wraps(func)
         def logObject(*args, **kwargs):
-            print("aaaa")
+            self.logger.info("aaaa")
             func(*args, **kwargs)
             print("aaaaaf")
 
         return logObject
-
